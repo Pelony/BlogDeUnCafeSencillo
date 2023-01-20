@@ -2,6 +2,7 @@
     --fuenteHeading: 'PT Sans', sans-serif;
     --fuenteParrafo: 'Open Sans', sans-serif;
     --primario: #784D3C;
+    --gris:#e1e1e1;
     --blanco: #fff;
     --negro: #000;
 }
@@ -36,19 +37,19 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 4.8rem;
-}
-
-h2 {
     font-size: 4rem;
 }
 
+h2 {
+    font-size: 3rem;
+}
+
 h3 {
-    font-size: 3.2rem;
+    font-size: 2rem;
 }
 
 h4 {
-    font: 2.8rem;
+    font: 1.6rem;
 }
 
 img {
@@ -69,7 +70,7 @@ img {
 
 .header {
     background-image: url(../img/cafe5.jpg);
-    height: 40rem;
+    height: 80rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -116,5 +117,45 @@ img {
     .navegacion{
         display: flex;
         gap: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .contenido-principal{
+        display:grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.entrada{
+    border-bottom:1px solid var(--gris) ;
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+.boton{
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.boton--primario{
+    background-color: var(--negro);
+
+}
+
+@media (min-width: 768px) {
+    .boton{
+        display:inline-block;
+        
+
     }
 }
